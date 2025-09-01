@@ -1,0 +1,15 @@
+[build]
+  # This is the command that builds your Vite project
+  command = "npm run build"
+  
+  # This is the directory that contains the built site
+  publish = "dist"
+
+# This rule is crucial for Single-Page Applications (SPAs) like those
+# built with Vite. It prevents 404 errors when a user refreshes the page
+# on a route other than the homepage.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
