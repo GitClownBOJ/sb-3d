@@ -43,7 +43,7 @@ spotLight.position.set(0, 25, 0);
 scene.add(spotLight);
 
 const loader = new GLTFLoader().setPath('/public/3d_tv/');
-loader.load('result.gltf', (gltf) => {
+loader.load('result.glb', (gltf) => {
     const model = gltf.scene;
    model.position.set(0, -0.5, 0);
    model.rotation.y = -Math.PI / 4;
