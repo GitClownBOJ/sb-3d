@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
+
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -42,7 +43,7 @@ const spotLight = new THREE.SpotLight(0xffffff, 2, 100, 0.6, 0.5);
 spotLight.position.set(0, 25, 0);
 scene.add(spotLight);
 
-const loader = new GLTFLoader().setPath('/public/3d_tv/');
+const loader = new GLTFLoader().setPath('public/3d_tv/');
 loader.load('result.glb', (gltf) => {
     const model = gltf.scene;
    model.position.set(0, -0.5, 0);
